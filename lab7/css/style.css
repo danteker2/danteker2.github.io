@@ -13,6 +13,7 @@ body {
   --light: #ecf0f1;
 }
 
+/* ================= TOP HEADER ================= */
 .top-header {
   position: relative;
   padding: 12px 0;
@@ -32,57 +33,73 @@ body {
   filter: brightness(2.5);
   z-index: 0;
 }
+
 .top-header .container {
   position: relative;
   z-index: 1;
 }
+
 .top-header .logo {
   float: left;
   display: block;
 }
+
 .top-header .logo img {
   height: 150px;
   width: auto;
   display: block;
 }
+
 .top-header .header-contacts {
   float: right;
   text-align: right;
   padding-top: 5px;
 }
+
 .top-header .header-contacts a {
   color: #333;
   text-decoration: none;
   font-size: 15px;
+  /* ✅ Добавлена плавная смена цвета */
+  transition: color 0.3s ease;
 }
+
 .top-header .header-contacts a:hover {
   color: var(--primary);
 }
+
 .top-header .header-contacts .contact-line {
   margin-bottom: 4px;
 }
+
 .top-header .header-contacts .contact-line i {
   margin-right: 5px;
   color: var(--primary);
   width: 18px;
   text-align: center;
 }
+
 .top-header .social-icons {
   margin-top: 6px;
 }
+
 .top-header .social-icons a {
   display: inline-block;
   margin: 0 4px;
   font-size: 22px;
-  transition: color 0.3s;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
+
 .top-header .social-icons a:hover {
   color: var(--primary) !important;
+  transform: translateY(-2px);
 }
+
 .top-header .social-icons .fa-whatsapp { color: #25D366; }
 .top-header .social-icons .fa-telegram { color: #0088cc; }
 .top-header .social-icons .fa-vk { color: #4c75a3; }
 
+/* ================= MAIN NAV ================= */
 .main-nav {
   background: #fff;
   border: none;
@@ -90,8 +107,10 @@ body {
   border-radius: 0;
   margin-bottom: 0;
 }
+
 .main-nav .container { position: relative; }
 .main-nav .navbar-nav { margin: 0; }
+
 .main-nav .navbar-nav > li > a {
   color: var(--secondary);
   font-weight: 600;
@@ -99,15 +118,21 @@ body {
   font-size: 13px;
   letter-spacing: 0.5px;
   padding: 15px 16px;
+  /* ✅ Ваша transition для меню */
   transition: background-color 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
-            transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+              transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
 .main-nav .navbar-nav > li > a:hover,
 .main-nav .navbar-nav > .active > a {
   color: var(--primary);
   background: none;
+  transform: translateY(-2px); /* ✅ Эффект подъема */
 }
+
 .main-nav .nav-right { float: right; margin-top: 2px; }
+
+/* ✅ Кнопка "Заказать звонок" - улучшена анимация */
 .main-nav .btn-call {
   background: #d9534f;
   color: #fff;
@@ -118,16 +143,26 @@ body {
   border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+  /* ✅ Добавлен transition */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.main-nav .btn-call i { margin-right: 5px; }
-.main-nav .btn-call:hover { background: #c9302c; color: #fff; }
 
+.main-nav .btn-call i { margin-right: 5px; }
+
+.main-nav .btn-call:hover { 
+  background: #c9302c; 
+  color: #fff; 
+  transform: translateY(-2px); /* ✅ Подпрыгивание при наведении */
+}
+
+/* ================= BANNER ================= */
 .banner-section {
   position: relative;
   background: var(--secondary);
   overflow: hidden;
   min-height: 420px;
 }
+
 .banner-section .banner-overlay {
   position: relative;
   z-index: 2;
@@ -135,6 +170,7 @@ body {
   text-align: center;
   color: #fff;
 }
+
 .banner-section .banner-title {
   font-size: 2.6em;
   font-weight: 700;
@@ -142,6 +178,7 @@ body {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
   line-height: 1.2;
 }
+
 .banner-section .banner-subtitle {
   font-size: 1.3em;
   font-weight: 300;
@@ -149,6 +186,8 @@ body {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   opacity: 0.95;
 }
+
+/* ✅ Кнопка баннера - улучшена анимация */
 .banner-section .btn-banner {
   background: var(--primary);
   color: #fff;
@@ -159,51 +198,65 @@ body {
   border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: background 0.3s;
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  /* ✅ Добавлен transform в transition */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .banner-section .btn-banner:hover {
   background: var(--primary-dark);
   color: #fff;
+  transform: translateY(-3px); /* ✅ Подъем кнопки */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4); /* ✅ Тень растет вместе с кнопкой */
 }
 
+/* ================= ABOUT SECTION ================= */
 #about { padding: 60px 0; background: #fff; }
+
 #about .section-title {
   text-align: center;
   margin-bottom: 45px;
   color: var(--secondary);
 }
+
 #about .section-title h2 {
   font-size: 2em;
   font-weight: 600;
   margin-bottom: 12px;
 }
+
 #about .section-title hr {
   width: 70px;
   border: none;
   border-top: 3px solid var(--primary);
   margin: 0 auto;
 }
+
 .about-content { display: flex; align-items: center; gap: 50px; }
 .about-text { flex: 1; }
+
 .about-text h3 {
   color: var(--primary);
   font-size: 1.5em;
   margin-bottom: 18px;
   font-weight: 600;
 }
+
 .about-text p {
   font-size: 15px;
   color: #555;
   margin-bottom: 12px;
 }
+
 .about-text .about-list { list-style: none; padding: 0; margin: 22px 0; }
+
 .about-text .about-list li {
   padding: 7px 0 7px 28px;
   position: relative;
   font-size: 14px;
   color: #444;
 }
+
 .about-text .about-list li::before {
   content: "✓";
   position: absolute;
@@ -212,6 +265,8 @@ body {
   font-weight: bold;
   font-size: 16px;
 }
+
+/* ✅ Кнопка в секции "О нас" - улучшена анимация */
 .about-text .btn-about {
   background: var(--primary);
   color: #fff;
@@ -222,32 +277,41 @@ body {
   text-decoration: none;
   display: inline-block;
   margin-top: 5px;
-  transition: background 0.3s;
+  /* ✅ Добавлен transform в transition */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .about-text .btn-about:hover {
   background: var(--primary-dark);
   color: #fff;
+  transform: translateY(-2px); /* ✅ Подъем кнопки */
 }
+
 .about-image { flex: 1; text-align: center; }
+
 .about-image img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
+
 .about-image .about-caption {
   margin-top: 10px;
   font-size: 13px;
   color: #888;
 }
+
 .about-image .about-caption i {
   margin-right: 4px;
   color: var(--primary);
 }
 
+/* ================= MEDIA QUERIES ================= */
 @media (max-width: 991px) {
   .about-content { flex-direction: column; gap: 30px; }
 }
+
 @media (max-width: 767px) {
   .top-header .logo { float: none; text-align: center; display: block; }
   .top-header .header-contacts { float: none; text-align: center; margin-top: 12px; }
