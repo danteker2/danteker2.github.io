@@ -254,3 +254,15 @@ body {
   .banner-section .banner-overlay { padding: 50px 0 40px; }
   .main-nav .nav-right { float: none; margin-top: 0; text-align: center; }
 }
+
+.main-nav .btn-call,
+.banner-section .btn-banner,
+.about-text .btn-about {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.main-nav .btn-call:hover,
+.banner-section .btn-banner:hover,
+.about-text .btn-about:hover {
+  transform: translateY(-2px);
+}
