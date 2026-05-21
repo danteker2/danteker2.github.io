@@ -13,7 +13,6 @@ body {
   --light: #ecf0f1;
 }
 
-/* ================= TOP HEADER ================= */
 .top-header {
   position: relative;
   padding: 12px 0;
@@ -99,7 +98,6 @@ body {
 .top-header .social-icons .fa-telegram { color: #0088cc; }
 .top-header .social-icons .fa-vk { color: #4c75a3; }
 
-/* ================= MAIN NAV ================= */
 .main-nav {
   background: #fff;
   border: none;
@@ -118,7 +116,6 @@ body {
   font-size: 13px;
   letter-spacing: 0.5px;
   padding: 15px 16px;
-  /* ✅ Ваша transition для меню */
   transition: background-color 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
               transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -132,7 +129,6 @@ body {
 
 .main-nav .nav-right { float: right; margin-top: 2px; }
 
-/* ✅ Кнопка "Заказать звонок" - улучшена анимация */
 .main-nav .btn-call {
   background: #d9534f;
   color: #fff;
@@ -143,7 +139,6 @@ body {
   border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  /* ✅ Добавлен transition */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -155,7 +150,6 @@ body {
   transform: translateY(-2px); /* ✅ Подпрыгивание при наведении */
 }
 
-/* ================= BANNER ================= */
 .banner-section {
   position: relative;
   background: var(--secondary);
@@ -187,7 +181,6 @@ body {
   opacity: 0.95;
 }
 
-/* ✅ Кнопка баннера - улучшена анимация */
 .banner-section .btn-banner {
   background: var(--primary);
   color: #fff;
@@ -199,7 +192,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-  /* ✅ Добавлен transform в transition */
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -210,7 +202,6 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.4); /* ✅ Тень растет вместе с кнопкой */
 }
 
-/* ================= ABOUT SECTION ================= */
 #about { padding: 60px 0; background: #fff; }
 
 #about .section-title {
@@ -266,7 +257,6 @@ body {
   font-size: 16px;
 }
 
-/* ✅ Кнопка в секции "О нас" - улучшена анимация */
 .about-text .btn-about {
   background: var(--primary);
   color: #fff;
@@ -277,7 +267,6 @@ body {
   text-decoration: none;
   display: inline-block;
   margin-top: 5px;
-  /* ✅ Добавлен transform в transition */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -307,7 +296,6 @@ body {
   color: var(--primary);
 }
 
-/* ================= MEDIA QUERIES ================= */
 @media (max-width: 991px) {
   .about-content { flex-direction: column; gap: 30px; }
 }
