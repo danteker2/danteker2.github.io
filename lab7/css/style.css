@@ -99,6 +99,8 @@ body {
   font-size: 13px;
   letter-spacing: 0.5px;
   padding: 15px 16px;
+  transition: background-color 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+            transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .main-nav .navbar-nav > li > a:hover,
 .main-nav .navbar-nav > .active > a {
@@ -253,16 +255,4 @@ body {
   .banner-section .banner-subtitle { font-size: 1em; }
   .banner-section .banner-overlay { padding: 50px 0 40px; }
   .main-nav .nav-right { float: none; margin-top: 0; text-align: center; }
-}
-
-.main-nav .btn-call,
-.banner-section .btn-banner,
-.about-text .btn-about {
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.main-nav .btn-call:hover,
-.banner-section .btn-banner:hover,
-.about-text .btn-about:hover {
-  transform: translateY(-2px);
 }
